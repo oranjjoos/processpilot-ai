@@ -1,11 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowDown, ArrowRight, Check } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import CTAButton from "./CTAButton";
 import FloatingWorkflowVisual from "./FloatingWorkflowVisual";
 import { fadeInUp, staggerContainer } from "@/lib/utils";
+
+const heroBullets = [
+  "Workflow study before any tool recommendation",
+  "AI opportunities identified and ranked by impact",
+  "Vendor-neutral — we recommend what fits, not what sells",
+];
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -19,10 +25,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative z-10 flex min-h-screen items-center pb-16 pt-28 lg:pt-32"
+      className="relative z-10 flex min-h-[92vh] items-center overflow-x-hidden pb-12 pt-24 lg:min-h-screen lg:pb-16 lg:pt-32"
     >
       <div className="container-section w-full">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-8">
           {/* Left — text content */}
           <motion.div
             variants={staggerContainer}
@@ -31,7 +37,7 @@ export default function Hero() {
             className="max-w-xl"
           >
             {/* Eyebrow badge */}
-            <motion.div variants={fadeInUp} className="mb-6">
+            <motion.div variants={fadeInUp} className="mb-5">
               <span className="inline-flex items-center gap-2 rounded-full border border-electric-500/25 bg-electric-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-electric-400">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-electric-400 opacity-75" />
@@ -51,13 +57,17 @@ export default function Hero() {
               money on the wrong tools.
             </motion.h1>
 
-            {/* Subheadline */}
-            <motion.p
-              variants={fadeInUp}
-              className="mb-8 text-lg leading-relaxed text-slate-400"
-            >
-              {siteConfig.firm.subTagline}
-            </motion.p>
+            {/* Bullet proof points — replaces long paragraph */}
+            <motion.ul variants={fadeInUp} className="mb-8 space-y-2.5">
+              {heroBullets.map((point) => (
+                <li key={point} className="flex items-start gap-2.5">
+                  <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-electric-500/15">
+                    <Check size={9} className="text-electric-400" strokeWidth={3} />
+                  </span>
+                  <span className="text-sm leading-snug text-slate-400">{point}</span>
+                </li>
+              ))}
+            </motion.ul>
 
             {/* CTA row */}
             <motion.div
@@ -82,23 +92,10 @@ export default function Hero() {
               </CTAButton>
             </motion.div>
 
-            {/* Trust line */}
-            <motion.p
-              variants={fadeInUp}
-              className="flex items-start gap-2 text-sm text-slate-500"
-            >
-              <ChevronRight
-                size={14}
-                className="mt-0.5 shrink-0 text-electric-500"
-                strokeWidth={2.5}
-              />
-              {siteConfig.firm.trustLine}
-            </motion.p>
-
             {/* Stats row */}
             <motion.div
               variants={fadeInUp}
-              className="mt-10 flex flex-wrap gap-8 border-t border-white/6 pt-8"
+              className="flex flex-wrap gap-8 border-t border-white/6 pt-7"
             >
               {[
                 { value: "Free", label: "First consultation" },
@@ -113,12 +110,12 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right — animated visual */}
+          {/* Right — animated visual (hidden on small mobile, shown sm+) */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="flex justify-center lg:justify-end"
+            className="hidden justify-center sm:flex lg:justify-end"
           >
             <FloatingWorkflowVisual />
           </motion.div>
@@ -129,7 +126,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2"
         >
           <button
             onClick={() => scrollTo("#problem")}

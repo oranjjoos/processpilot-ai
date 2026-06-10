@@ -162,8 +162,8 @@ export default function Contact() {
       <div className="container-section">
         <SectionHeader
           eyebrow="Get in Touch"
-          title="Ready to find out where AI can actually help your business?"
-          subtitle="Book a free consultation. We will understand your business, explain our process, and show how a workflow study can identify practical AI and automation opportunities."
+          title="Ready to find out where AI fits your business?"
+          subtitle="First consultation is free. No obligation, no selling."
         />
 
         <motion.div
@@ -213,8 +213,29 @@ export default function Contact() {
               })}
             </div>
 
+            {/* What happens next */}
+            <div className="mt-6 rounded-xl border border-electric-500/12 bg-electric-500/4 p-4">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-electric-400/80">
+                What happens next
+              </p>
+              <div className="space-y-2.5">
+                {[
+                  "We respond within 1 business day",
+                  "Free 30-min consultation — no selling",
+                  "Receive a tailored process study proposal",
+                ].map((step, i) => (
+                  <div key={i} className="flex items-start gap-2.5">
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-electric-500/20 text-[9px] font-bold text-electric-400">
+                      {i + 1}
+                    </span>
+                    <span className="text-xs text-slate-400">{step}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* WhatsApp CTA */}
-            <div className="mt-6">
+            <div className="mt-4">
               <CTAButton
                 href={siteConfig.contact.whatsappUrl}
                 variant="secondary"

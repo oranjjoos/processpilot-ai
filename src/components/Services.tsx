@@ -27,6 +27,18 @@ const iconMap: Record<string, React.ElementType> = {
   RefreshCw,
 };
 
+// Short display descriptions — siteConfig retains the full versions
+const serviceShortDescs: Record<string, string> = {
+  consultation: "Free first meeting. No obligation, no selling.",
+  "workflow-study": "We map every process, tool, and inefficiency end-to-end.",
+  "ai-assessment": "Structured analysis of where AI and automation can reduce friction.",
+  "tool-recommendation": "Vendor-neutral tool recommendations matched to your workflows.",
+  roadmap: "A clear, prioritised plan from quick wins to transformation.",
+  implementation: "Vendor coordination, configuration, and rollout — we handle it.",
+  training: "Practical training with SOPs so your team actually uses it.",
+  retainer: "Continuous support as your operations evolve and grow.",
+};
+
 const serviceColors = [
   "from-electric-500/10 to-electric-600/5 border-electric-500/15 text-electric-400",
   "from-blue-500/10 to-blue-600/5 border-blue-500/15 text-blue-400",
@@ -91,7 +103,7 @@ export default function Services() {
                   {service.title}
                 </h3>
                 <p className="text-xs leading-relaxed text-slate-500">
-                  {service.description}
+                  {serviceShortDescs[service.id] ?? service.description}
                 </p>
               </motion.div>
             );
