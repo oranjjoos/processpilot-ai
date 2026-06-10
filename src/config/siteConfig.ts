@@ -10,7 +10,7 @@ export const siteConfig = {
     shortName: "ProcessPilot",
     tagline: "Make your business AI-ready without wasting money on the wrong tools.",
     subTagline:
-      "We study your workflows first, then recommend the AI tools, automations, dashboards, and digital systems that can save time, reduce manual work, and give owners clearer control.",
+      "We study your workflows first. Then we recommend the tools, automations, and digital systems that can genuinely reduce manual work and give owners clearer control.",
     credibilityStatement:
       "ProcessPilot AI is built within a group with over 45 years of consulting and project experience, bringing structured problem-solving, disciplined reporting, and practical implementation thinking to the AI transformation space.",
     location: "Serving owner-led businesses internationally",
@@ -96,27 +96,21 @@ export const siteConfig = {
     },
     {
       step: 2,
-      title: "Workflow Study",
+      title: "Deep Workflow Study",
       description:
-        "We interview key people, review current tools, study documents, observe processes, and map how work actually gets done.",
+        "We interview key people, review current tools, study documents, observe processes, and map exactly how work gets done — including every inefficiency, bottleneck, and missed automation opportunity.",
     },
     {
       step: 3,
-      title: "Opportunity Assessment",
+      title: "Report & Roadmap Delivered",
       description:
-        "We identify where AI, automation, dashboards, software, SOPs, or integrations can reduce friction and improve control.",
+        "You receive a structured assessment: workflow maps, AI opportunity matrix, digital maturity score, recommended tools, and a prioritised implementation roadmap.",
     },
     {
       step: 4,
-      title: "Practical Roadmap",
+      title: "You Choose the Support Level",
       description:
-        "You receive a clear roadmap: what to fix, what to automate, what tools to consider, and what impact to expect.",
-    },
-    {
-      step: 5,
-      title: "Optional Rollout Support",
-      description:
-        "If you want, we support tool selection, vendor coordination, implementation, training, dashboards, and ongoing monitoring.",
+        "Assessment only. Assessment plus roadmap. Or end-to-end implementation, vendor coordination, dashboards, training, and ongoing monitoring. Your choice.",
     },
   ],
 
@@ -289,34 +283,29 @@ export const siteConfig = {
   // ── FAQs (Section 10) ─────────────────────────────────────
   faqs: [
     {
-      question: "Is the first meeting free?",
+      question: "Is the first meeting really free?",
       answer:
-        "Yes. The first consultation is free. We use it to understand your business, your current pain points, and whether our workflow study can help.",
+        "Yes, completely. The first consultation has no cost and no obligation. We use it to understand your business and your current pain points — and to be honest about whether our workflow study is the right fit for you.",
     },
     {
-      question: "Do you sell software?",
+      question: "Do you sell software or earn from recommendations?",
       answer:
-        "We do not start by selling software. We first study your business processes and then recommend the tools, AI automations, dashboards, or systems that fit your actual needs.",
+        "No. We are paid for our consulting work, not for recommending tools. We study your workflows first, then recommend the tools, automations, or systems that genuinely fit — regardless of vendor.",
     },
     {
       question: "Do we have to implement everything you recommend?",
       answer:
-        "No. You can choose how much support you need. Some clients may only want the assessment. Others may want end-to-end implementation, training, and monitoring.",
+        "No. You choose the level of support you need. Some clients want the assessment only. Others want a roadmap and tool selection. Others want full end-to-end implementation, training, and ongoing monitoring. Every engagement is structured around your priorities.",
     },
     {
-      question: "Is this only for technology companies?",
+      question: "What kind of improvements can we expect?",
       answer:
-        "No. We are built for owner-led businesses that may still depend on Excel, WhatsApp, manual approvals, paper files, and disconnected tools.",
+        "Our assessments are designed to identify concrete opportunities: time savings, better management visibility, reduced manual work, faster reporting, and clearer operational control. The actual impact depends on implementation quality and team adoption.",
     },
     {
-      question: "What kind of results can we expect?",
+      question: "How do you handle confidential business information?",
       answer:
-        "Our work is designed to identify opportunities for time savings, better visibility, reduced manual work, improved reporting, fewer process gaps, and clearer operational control. Actual savings depend on implementation quality and staff adoption.",
-    },
-    {
-      question: "Will our business information remain confidential?",
-      answer:
-        "Yes. Client information, documents, workflows, and business data are treated as confidential.",
+        "All client information — including documents, workflows, processes, and business data — is treated as strictly confidential. We do not share, publish, or reference client information without explicit permission.",
     },
   ],
 

@@ -29,8 +29,8 @@ export default function HowItWorks() {
       <div className="container-section relative">
         <SectionHeader
           eyebrow="The Process"
-          title="Five clear steps from first meeting to full transformation."
-          subtitle="Start with a free conversation. Then choose exactly how far you want to go."
+          title="Four steps from first conversation to AI-ready operations."
+          subtitle="Start with a free meeting. Then choose exactly how far you want to go."
         />
 
         <div
@@ -71,9 +71,9 @@ export default function HowItWorks() {
                           Free — No obligation
                         </span>
                       )}
-                      {step.step === 5 && (
+                      {step.step === 4 && (
                         <span className="mb-3 inline-block rounded-full border border-amber-500/25 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-400">
-                          Optional
+                          Your choice
                         </span>
                       )}
                       <h3 className="mb-2 text-lg font-semibold text-slate-100">

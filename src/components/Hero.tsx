@@ -73,10 +73,10 @@ export default function Hero() {
                 <ArrowRight size={16} strokeWidth={2.5} />
               </CTAButton>
               <CTAButton
-                href="#what-we-do"
+                href="#how-it-works"
                 variant="secondary"
                 size="lg"
-                onClick={() => scrollTo("#what-we-do")}
+                onClick={() => scrollTo("#how-it-works")}
               >
                 {siteConfig.cta.secondary}
               </CTAButton>

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 import SectionHeader from "./SectionHeader";
+import DashboardMockup from "./DashboardMockup";
 import { fadeInUp, staggerContainerSlow } from "@/lib/utils";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -58,12 +59,23 @@ export default function Deliverables() {
           subtitle="A comprehensive set of findings, recommendations, and actionable plans — structured for clarity, not complexity."
         />
 
+        {/* Dashboard preview mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-14 mb-12"
+        >
+          <DashboardMockup />
+        </motion.div>
+
         <motion.div
           ref={ref}
           variants={staggerContainerSlow}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
         >
           {siteConfig.deliverables.map((item, i) => {
             const Icon = iconMap[item.icon] ?? FileText;
